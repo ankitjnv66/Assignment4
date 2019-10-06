@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Handling Form Submission</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<center>
+		<div style="border: 1">
+			<h1>Employee Form</h1>
+			<form action="#" th:action="@{/saveEmp}" th:object="${employee}"
+				method="post">
+				<table>
+					<tr>
+						<td>Id:</td>
+						<td><input type="text" th:field="*{empId}" /></td>
+					</tr>
+					<tr>
+						<td>Name:</td>
+						<td><input type="text" th:field="*{empName}" /></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><input type="text" th:field="*{empEmail}" /></td>
+					</tr>
+					<tr>
+						<td>Location:</td>
+						<td><input type="text" th:field="*{empLocation}" /></td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td><input type="submit" value="Submit" /></td>
+						<td><input type="reset" value="Reset" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</center>
+</body>
+</html>
